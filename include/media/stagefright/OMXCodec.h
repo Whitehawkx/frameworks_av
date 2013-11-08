@@ -102,9 +102,7 @@ struct OMXCodec : public MediaSource,
         kOutputBuffersAreUnreadable           = 4096,
 #if defined(OMAP_ENHANCEMENT)
         kAvoidMemcopyInputRecordingFrames     = 0x20000000,
-#endif        
-        kRequiresGlobalFlush                  = 0x20000000, // 2^29
-        kRequiresWMAProComponent              = 0x40000000, //2^30
+#endif
     };
 
     struct CodecNameAndQuirks {
@@ -151,7 +149,6 @@ private:
     };
 
     enum {
-        kPortIndexBoth   = -1,
         kPortIndexInput  = 0,
         kPortIndexOutput = 1
     };
